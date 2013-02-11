@@ -1,0 +1,6 @@
+driver = mysql                                                                            
+connect = host=127.0.0.1 dbname=doco user=root password=                
+password_query = SELECT username as user, md5(password)as password FROM users WHERE username = '%u' 
+                                                                                                        
+user_query = SELECT '/mailstore/%u' as home, 'mdbox:/mailstore/%u/mdbox' as mail, 500 as uid, 500 as gid FROM users WHERE username = '%u' 
+iterate_query = SELECT username as user from users    

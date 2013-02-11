@@ -1,0 +1,22 @@
+--- dovecot.spec.orig   2013-01-31 07:19:24.290887354 +0100
++++ dovecot.spec        2013-02-08 09:43:59.991938748 +0100
+@@ -8,8 +8,8 @@
+ Summary: Dovecot Secure imap server
+ Name: dovecot
+ Epoch: 1
+-Version: 2.1.1
+-Release: 2_132%{?dist}
++Version: 2.2
++Release: 4%{?dist}
+ License: MIT
+ Group: System Environment/Daemons
+ 
+@@ -317,6 +317,8 @@
+ %{_libdir}/dovecot/*_plugin.so
+ %{_libdir}/dovecot/*.so.*
+ %{_libdir}/dovecot/libdriver_*.so
++%{_libdir}/dovecot/libssl_iostream_openssl.so
++
+ 
+ %{_libexecdir}/dovecot
+ %attr(2755,root,mail) %{_libexecdir}/dovecot/deliver
