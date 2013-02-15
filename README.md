@@ -1,3 +1,12 @@
+Tests
+=====
+
+!! edit account info in test/accountconfig.py to match your setup !!
+
+Test: Append many messages to server1, check if they are synced to server2 and if we don't get any duplicates
+Script: test/test_massappend_server1.py
+
+
 Setup
 =====
 
