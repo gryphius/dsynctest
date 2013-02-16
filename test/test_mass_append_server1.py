@@ -31,7 +31,7 @@ for message in create_dummy_txt_messages(NUMMESSAGES):
 #Check Message count on server 1
 print "Verifying amount on server 1..."
 time.sleep(2)
-result,messagecount=imap1.select()
+result,messagecount=imap1.select(MAILBOX)
 messagecount=int(messagecount[0])
 assert messagecount==NUMMESSAGES,"Server1: Expected %s messages, got %s"%(NUMMESSAGES,messagecount)
 
@@ -44,7 +44,7 @@ timeout=now+MAX_WAIT_SYNC
 while True:
     time.sleep(CHECK_INTERVAL)
     
-    result,messagecount=imap2.select()
+    result,messagecount=imap2.select(MAILBOX)
     messagecount=int(messagecount[0])
     print "Current messagecount on server 2: %s"%messagecount
     
