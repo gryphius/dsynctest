@@ -37,7 +37,7 @@ assert messagecount==NUMMESSAGES,"Server1: Expected %s messages, got %s"%(NUMMES
 
 
 #check sync to server 2
-imap2=get_imap_connection(SERVER2_HOST, USERNAME, PASSWORD,assertEmpty=True)
+imap2=get_imap_connection(SERVER2_HOST, USERNAME, PASSWORD,assertEmpty=False)
 now=time.time()
 timeout=now+MAX_WAIT_SYNC
 
